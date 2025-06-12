@@ -1,6 +1,14 @@
-﻿namespace APBD_Kolos_2.Services;
+﻿using APBD_Kolos_2.Data;
+using APBD_Kolos_2.DTOs;
 
-public class BService
+namespace APBD_Kolos_2.Services;
+
+public class BService : IBService
 {
+    private readonly DatabaseContext _context;
     
+    public BService(DatabaseContext context)
+    {
+        _context = context;
+    }
 }
